@@ -1,0 +1,148 @@
+/* #f7fd04
+#f9b20b
+#f98404
+#fc5404 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.canvas {
+  position: relative;
+  display: flex;
+  background-image: linear-gradient(180deg, #fc5404, #fc5404, #f9b20b);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.cloud {
+  position: absolute;
+  background: #f9b20b;
+  width: 50vmin;
+  height: 20vmin;
+  transform: skew(-25deg);
+  border-radius: 30%;
+  opacity: 0.5;
+  top: 30vmin;
+  box-shadow: -10vmin 0 20px #f9b20b,
+  10vmin 2vmin 20px #f9b20b,
+  2vmin 10vmin 20px #f9b20b,
+  2vmin -5vmin 20px #f9b20b,
+  -30vmin 15vmin 20px #f9b20b;
+}
+
+.circle {
+  position: absolute;
+  background: #fef478;
+  width: 50vmin;
+  height: 50vmin;
+  border-radius: 50%;
+  box-shadow: inset 5vmin 0 5px #fff342,
+    inset 0 5vmin 5px #fff342,
+    inset -5vmin 0 5px #fff342, 
+    inset 0 -5vmin 5px #fff342;
+}
+
+.bird1 {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  left: -50vmin;
+  border: 1px solid #000;
+}
+
+.body {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 5vmin solid #000;
+  border-right: 7vmin solid transparent;
+  transform: rotate(15deg);
+}
+
+.body::after {
+  content: "";
+  position: absolute;
+  background: #000;
+  width: 8vmin;
+  height: 8vmin;
+  border-radius: 3vmin 3vmin 8vmin 8vmin;
+  top: -9vmin;
+  left: -3.5vmin;
+  transform: rotate(-15deg);
+}
+
+.wingL {
+  position: absolute;
+  width: 15vmin;
+  height: 15vmin;
+  background: transparent;
+  transform: rotate(15deg);
+  top: -6vmin;
+  left: -15vmin;
+  border-top: 3vmin solid #000;
+  border-radius: 5vmin 0 0 0;
+}
+
+.wingL::before {
+  content: "";
+  position:absolute;
+  width: 15vmin;
+  height: 17vmin;
+  background: transparent;
+  border-top: 1.9vmin solid #000;
+  transform: rotate(-35deg);
+  border-radius: 16%;
+  top: -0.8vmin;
+  right: 4.4vmin;
+}
+
+.wingR {
+  position: absolute;
+  width: 15vmin;
+  height: 15vmin;
+  background: transparent;
+  transform: rotate(-15deg);
+  top: -6vmin;
+  left: 3vmin;
+  border-top: 3vmin solid #000;
+  border-radius: 0 5vmin 0 0;
+}
+
+.wingR::after {
+  content: "";
+  position:absolute;
+  width: 15vmin;
+  height: 17vmin;
+  background: transparent;
+  border-top: 1.9vmin solid #000;
+  transform: rotate(35deg);
+  border-radius: 16%;
+  top: -0.8vmin;
+  right: -4.4vmin;
+}
+
+.bird2 {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  top: 15vmin;
+  right: -40vmin;
+  border: 1px solid #000;
+}
+
+.bird2 .body {
+  border-top: 4vmin solid #000;
+  border-right: 6vmin solid transparent;
+}
+
+.bird2 .body::after {
+  width: 6vmin;
+  height: 6vmin;
+  top: -7vmin;
+  left: -2vmin;
+}
